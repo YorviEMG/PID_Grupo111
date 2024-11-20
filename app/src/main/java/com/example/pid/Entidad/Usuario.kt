@@ -14,6 +14,7 @@ class Usuario {
     var fechaNacimiento: String = ""
 
     //idUsuario:Int,
+    //Se genera constructor para incializar los datos
     constructor(nombres:String, apellidos:String, dni:String,
                 login:String, password:String, email:String, fechaNacimiento: String
     ){
