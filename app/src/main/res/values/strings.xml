@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">PID</string>
+
+    //Miguel Tirado
+    <string name="nombres">Ingresar Nombres</string>
+    <string name="apellidos">Ingresar Apellidos</string>
+    <string name="DNI">Ingresa el DNI</string>
+    <string name="userName">Ingresa User Name</string>
+    <string name="contrasenia">Ingresa la Contraseña</string>
+    <string name="email">Ingresa tu Email</string>
+    <string name="fecha">Ingresa la Fecha</string>
+
+
+    <string name="usuarioLogin">Ingresa tu usuario</string>
+    <string name="usuarioPassword">Ingresa tu Contrasña</string>
+
+
+
+
+
+
+
+
+
 </resources>
