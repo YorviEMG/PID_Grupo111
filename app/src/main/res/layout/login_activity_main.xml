@@ -6,187 +6,115 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="190dp"
         android:orientation="vertical"
         android:padding="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        tools:layout_editor_absoluteX="127dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="-15dp"
+            app:srcCompat="@drawable/todoist" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:fontFamily="@font/allerta"
+            android:text="Inicia Sesion en TodoIst"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/usuarioLogin"
+            android:paddingBottom="6dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUsuarioLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/usuarioPassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUsuarioLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/Default"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Iniciar Sesion"
+                android:background="@drawable/boton_redondeado"
+                app:rippleColor="@color/botonInicia" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="196dp"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="1dp"
-                    android:layout_height="80dp"
-                    android:layout_weight="1" />
-
                 <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="250dp"
-                    android:layout_height="80dp"
-                    android:fontFamily="monospace"
-                    android:gravity="center_vertical"
-                    android:text="TodoList"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/black"
-                    android:textColorLink="@color/white"
-                    android:textSize="34sp" />
-
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif"
+                    android:text="¿Olvidaste tu Contraseña?"
+                    android:textColor="#4B4A4A"
+                    android:layout_marginTop="16dp"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/btnRegistro"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="monospace"
-                    android:text="INICIAR SESIÓN"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="monospace"
-                        android:text="USUARIO"
-                        android:textColor="@color/black" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textField1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="8dp"
-                        android:hint="User"
-                        android:textColorHint="@color/white"
-                        app:hintTextColor="#AFAFAF">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtLogin"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/loginBlack"
-                            android:fontFamily="monospace"
-                            android:inputType="text"
-                            android:textColor="#FFFFFF"
-                            android:textColorLink="#FFFFFF"
-                            android:textSize="14sp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:orientation="vertical"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp">
-
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="monospace"
-                        android:text="CONTRASEÑA"
-                        android:textColor="@color/black" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textField2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="8dp"
-                        android:hint="Ingrese Contraseña"
-                        android:textColorHint="@color/white"
-                        app:endIconMode="password_toggle"
-                        app:hintTextColor="#B8B8B8">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/txtClave"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/loginBlack"
-                            android:fontFamily="monospace"
-                            android:inputType="textPassword"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btnLogin"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:backgroundTint="@color/buttonLogHard"
-                        android:fontFamily="monospace"
-                        android:text="INGRESAR"
-                        android:textColor="#FFFFFF" />
-
-                    <Button
-                        android:id="@+id/btnRegistro"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginStart="10dp"
-                        android:backgroundTint="@color/buttonLogSoft"
-                        android:fontFamily="monospace"
-                        android:text="REGISTRARSE"
-                        android:textColor="#FFFFFF" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"/>
-
+                    android:layout_weight="1"
+                    android:text="Registrate"
+                    android:background="@android:color/transparent"
+                    android:textColor="#FF0000" />
             </LinearLayout>
-
         </LinearLayout>
-        <!--
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/btnFacebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#17000000"
-            android:drawableTint="#13467C"
-            android:textColor="#323131"
-            android:textSize="14sp" />
-        -->
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,6 @@
     <color name="buttonLogSoft">#17000000</color>
     <color name="loginBlack">#B3000000</color>
     <color name="navbar_bg">#24252a</color>
+    <color name="botonInicia">#EB1C1C</color>
+
 </resources>
