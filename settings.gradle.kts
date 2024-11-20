@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pid"
+rootProject.name = "PID"
 include(":app")
  
