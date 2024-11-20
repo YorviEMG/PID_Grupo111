@@ -11,6 +11,6 @@ import retrofit2.http.Path
 interface ApiServiceUsuario {
     //Aquí deben ir los métodos del servicio
     @POST("usuario/registrar")
-    fun save(@Body usu:Usuario): Call<ResponseMessage>
+    fun save(@Body us:Usuario): Call<ResponseMessage>
 
 }
