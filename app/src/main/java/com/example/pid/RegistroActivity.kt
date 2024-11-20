@@ -77,13 +77,13 @@ class RegistroActivity: AppCompatActivity() {
                     var obj1 = response.body()!!
                     Log.d(obj1.mensaje, obj1.mensaje)
                     //showAlert("Respuesta del servidor: $obj1")
-                    showAlert(obj1.mensaje)
+                    showAlert2(obj1.mensaje)
                 }
             }
 
             override fun onFailure(call: Call<ResponseMessage>, t: Throwable) {
                 Log.e("MiClase", "Error de red: ${t.localizedMessage}")
-                showAlert(t.localizedMessage)
+                showAlert2(t.localizedMessage)
             }
 
         })
@@ -94,9 +94,10 @@ class RegistroActivity: AppCompatActivity() {
         var intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-    fun showAlert(men:String){
+
+    fun showAlert2(men:String){
         val builder= AlertDialog.Builder(this)
-        builder.setTitle("Advertencia")
+        builder.setTitle("Información")
         builder.setMessage(men)
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog =builder.create()

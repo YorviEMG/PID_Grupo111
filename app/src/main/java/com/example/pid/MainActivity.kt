@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun showAlert(men:String){
         val builder= AlertDialog.Builder(this)
-        builder.setTitle("Advertencia")
+        builder.setTitle("Información")
         builder.setMessage(men)
         builder.setPositiveButton("Aceptar",null)
         val dialog: AlertDialog =builder.create()
