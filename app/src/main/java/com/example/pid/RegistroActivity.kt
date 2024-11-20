@@ -83,7 +83,7 @@ class RegistroActivity : AppCompatActivity() {
         }
 
         // *Validación de Contraseña*
-        val passwordRegex = Regex("^(?=.[A-Za-z])(?=.\\d)(?=.[!@#\$%^&])[A-Za-z\\d!@#\$%^&*]{8,}$")
+        val passwordRegex = Regex("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[!@#\$%^&*])[A-Za-z\\d!@#\$%^&*]{8,}$")
         if (!password.matches(passwordRegex)) {
             showAlert("Elige una contraseña más segura. Prueba con una combinación de letras, números y símbolos.")
             return
