@@ -14,6 +14,29 @@
     <string name="usuarioLogin">Ingresa tu usuario</string>
     <string name="usuarioPassword">Ingresa tu Contrasña</string>
 
+    <string-array name="spinner_color">
+        <item>Rojo</item>
+        <item>Azul</item>
+        <item>Naranja</item>
+        <item>Blanco</item>
+        <item>Celeste</item>
+    </string-array>
+
+    <string-array name="spinner_prioridad">
+        <item>Prioridad 1</item>
+        <item>Prioridad 2</item>
+        <item>Prioridad 3</item>
+        <item>Prioridad 4</item>
+    </string-array>
+
+    <string-array name="spinner_tema">
+        <item>Ciencias</item>
+        <item>Matemáticas</item>
+        <item>Desarrollo de software</item>
+        <item>Gestión de Proyectos</item>
+    </string-array>
+
+
 
 
 
