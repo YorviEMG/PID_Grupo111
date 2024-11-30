@@ -14,5 +14,7 @@
     <color name="loginBlack">#B3000000</color>
     <color name="navbar_bg">#24252a</color>
     <color name="botonInicia">#EB1C1C</color>
+    <color name="menu">#F7F7F7</color>
+    <color name="log_orange">#FE402C</color>
 
 </resources>
