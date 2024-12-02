@@ -8,7 +8,7 @@ class ApiUtils {
 
         const val BASE_URL_LOGIN = "http://todo-list-api-net.eba-tmtufgav.us-east-2.elasticbeanstalk.com/url/"
 
-        const val BASE_URL_PROYECTO = ""
+        const val BASE_URL_PROYECTO = "http://todo-list-api-net.eba-tmtufgav.us-east-2.elasticbeanstalk.com/"
 
         fun getAPIServiceUsuario(): ApiServiceUsuario {
             return RetrofitClient.getClient(BASE_URL).create(ApiServiceUsuario::class.java)

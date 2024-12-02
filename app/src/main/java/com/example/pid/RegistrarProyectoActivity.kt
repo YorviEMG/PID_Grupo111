@@ -79,6 +79,7 @@ class RegistrarProyectoActivity : AppCompatActivity() {
             return
         }
 
+
         // Crear el objeto de solicitud con los datos del formulario
         val proyecto = Proyecto(
             nombre = nombre,

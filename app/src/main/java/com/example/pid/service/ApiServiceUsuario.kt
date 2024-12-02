@@ -22,5 +22,4 @@ interface ApiServiceUsuario {
 
     @POST("proyecto/")
     fun registrarProyecto(@Body proyecto: Proyecto): Call<Proyecto>
-
 }
