@@ -1,6 +1,7 @@
 package com.example.pid.service
 
 import com.example.pid.Entidad.LoginRequest
+import com.example.pid.Entidad.Proyecto
 import com.example.pid.Entidad.ResponseMessage
 import com.example.pid.Entidad.Usuario
 import retrofit2.Call
@@ -19,4 +20,6 @@ interface ApiServiceUsuario {
     @POST("auth/")
     fun postLogin(@Body lr: LoginRequest): Call<ResponseMessage>
 
+    @POST("proyecto/")
+    fun registrarProyecto(@Body proyecto: Proyecto): Call<Proyecto>
 }
