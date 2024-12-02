@@ -49,13 +49,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField"
+            android:id="@+id/textField02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/usuarioPassword">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtUsuarioLogin"
+                android:id="@+id/txtUsuarioContrasena"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -68,7 +68,7 @@
             android:layout_marginTop="15dp">
 
             <Button
-                android:id="@+id/Default"
+                android:id="@+id/btnLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
