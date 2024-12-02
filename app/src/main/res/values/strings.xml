@@ -12,7 +12,7 @@
 
 
     <string name="usuarioLogin">Ingresa tu usuario</string>
-    <string name="usuarioPassword">Ingresa tu Contrasña</string>
+    <string name="usuarioPassword">Ingresa tu Contraseña</string>
 
     <string-array name="spinner_color">
         <item>Rojo</item>
