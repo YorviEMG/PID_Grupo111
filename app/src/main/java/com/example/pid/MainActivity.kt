@@ -12,10 +12,12 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.appproject.utils.ApiUtils
 import com.example.pid.Entidad.LoginRequest
+import com.example.pid.Entidad.LoginResponse
 import com.example.pid.Entidad.ResponseMessage
 import com.example.pid.Entidad.Usuario
 import com.example.pid.service.ApiServiceUsuario
 import com.google.android.material.textfield.TextInputEditText
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
 import javax.security.auth.callback.Callback
@@ -54,8 +56,8 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun goToMenu(){
-        var intent = Intent(this, MenuActivity::class.java)
+    fun goToMenu(intent:Intent){
+        //var intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
     }
 
@@ -85,7 +87,32 @@ class MainActivity : AppCompatActivity() {
 
         // Falta arreglar el login
         val bean = LoginRequest(password, login)
-        api.postLogin(bean).enqueue(object : retrofit2.Callback<ResponseMessage> {
+        val bean2 = Usuario("","","",login,password,"","")
+        api.login(bean2).enqueue(object : retrofit2.Callback<LoginResponse> {
+            override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                if (response.isSuccessful) {
+                    var obj1 = response.body()!!
+                    //Intent a pasar a Menú
+                    val intent = Intent(this@MainActivity, MenuActivity::class.java)
+                    intent.putExtra("idUsuario", obj1.idUsuario)
+                    intent.putExtra("nombreCompleto", obj1.nombreCompleto)
+                    intent.putExtra("login", obj1.login)
+
+                    Log.d("MainActivity", obj1.idUsuario)
+                    goToMenu(intent);
+                } else {
+                    showAlert("Error en el ingreso. Intente nuevamente.")
+                    //goToMenu();
+                }
+            }
+
+            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                Log.e("MainActivity", "Error de red: ${t.localizedMessage}")
+                showAlert("Error de red. Intente nuevamente.")
+            }
+        })
+
+        /*api.postLogin(bean).enqueue(object : retrofit2.Callback<ResponseMessage> {
             override fun onResponse(call: Call<ResponseMessage>, response: Response<ResponseMessage>) {
                 if (response.isSuccessful) {
                     val obj1 = response.body()!!
@@ -102,6 +129,6 @@ class MainActivity : AppCompatActivity() {
                 Log.e("MainActivity", "Error de red: ${t.localizedMessage}")
                 showAlert("Error de red. Intente nuevamente.")
             }
-        })
+        })*/
     }
 }

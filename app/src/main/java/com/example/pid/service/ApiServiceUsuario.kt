@@ -1,9 +1,11 @@
 package com.example.pid.service
 
 import com.example.pid.Entidad.LoginRequest
+import com.example.pid.Entidad.LoginResponse
 import com.example.pid.Entidad.Proyecto
 import com.example.pid.Entidad.ResponseMessage
 import com.example.pid.Entidad.Usuario
+import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -22,4 +24,7 @@ interface ApiServiceUsuario {
 
     @POST("proyecto/")
     fun registrarProyecto(@Body proyecto: Proyecto): Call<Proyecto>
+
+    @POST("auth/login")
+    fun login(@Body usuario: Usuario): Call<LoginResponse>
 }
