@@ -13,13 +13,17 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appproject.utils.ApiUtils
 import com.example.pid.Entidad.Proyecto
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.Date
 
 class RegistrarProyectoActivity : AppCompatActivity() {
     private lateinit var nombreProyecto: TextInputEditText
+    private lateinit var descProyecto: TextInputEditText
     private lateinit var spinnerColor: Spinner
     private lateinit var spinnerTema: Spinner
     private lateinit var btnRegistrar: Button
@@ -36,6 +40,7 @@ class RegistrarProyectoActivity : AppCompatActivity() {
         }
         // Inicializar las vistas
         nombreProyecto = findViewById(R.id.txtRegistrarNombreProyecto)
+        descProyecto = findViewById(R.id.txtRegistrarDescProyecto)
         spinnerColor = findViewById(R.id.spnColor)
         spinnerTema = findViewById(R.id.spnTema)
         btnRegistrar = findViewById(R.id.btnRegistrarProyecto)
@@ -52,8 +57,7 @@ class RegistrarProyectoActivity : AppCompatActivity() {
         // Acción del botón Cancelar
         btnCancelar.setOnClickListener {
             finish() // Cierra la actividad y regresa a la anterior
-
-    }
+        }
 }
     private fun configurarSpinners() {
         val colores = arrayOf("Rojo", "Verde", "Azul", "Amarillo")
