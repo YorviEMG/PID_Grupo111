@@ -34,7 +34,7 @@
 
                 <ImageButton
                     android:id="@+id/btnPerfilMain"
-                    android:layout_width="10dp"
+                    android:layout_width="5dp"
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/menu"
@@ -43,9 +43,19 @@
                     android:src="@drawable/profile"
                     android:tint="@color/black" />
 
+                <TextView
+                    android:id="@+id/tvLoginPerfil"
+                    android:layout_width="10dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Perfil"
+                    android:textAlignment="center" />
+
+
                 <ImageButton
                     android:id="@+id/btnLogoutMain"
-                    android:layout_width="10dp"
+                    android:layout_width="5dp"
                     android:layout_height="60dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/menu"
@@ -73,6 +83,18 @@
                 android:paddingTop="20dp"
                 android:paddingRight="10dp">
 
+                <TextView
+                    android:id="@+id/tvWorkspace"
+                    android:layout_width="390dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center_vertical"
+                    android:text="WORKSPACE DE "
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -82,7 +104,7 @@
                         android:id="@+id/textView3"
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-condensed-medium"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="center_vertical"
                         android:text="MIS PROYECTOS"
                         android:textAlignment="center"
