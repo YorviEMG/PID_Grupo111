@@ -39,6 +39,7 @@ class MenuActivity : AppCompatActivity() {
         btnNuevoProyecto = findViewById(R.id.btnNuevoProyecto)
         btnNuevoProyecto.setOnClickListener{ goNuevoProyecto() }
         btnLogout = findViewById(R.id.btnLogoutMain)
+        btnLogout.setOnClickListener{ logout() }
         datos()
         tvLogin.text = login
         tvWorkspace.text = "Workspace de " + nombre
